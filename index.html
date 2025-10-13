@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFI Live Re-Imagined - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="rgba(255,255,255,0.05)" width="50" height="50"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .team {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-top: 30px;
+        }
+
+        nav {
+            background: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin: 30px 0 15px;
+            color: #764ba2;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f8f9ff;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .usp-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            font-size: 1.3em;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .segment-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+        }
+
+        .segment-card h4 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .container {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>TFI Live Re-Imagined</h1>
+            <p>Redesigning Ireland's National Public Transport App</p>
+            <p>Real-time tracking • Seamless ticketing • Accessibility-first design</p>
+            <div class="team">
+                <strong>Team:</strong> Joseph Folan • Sean Gannon • Diarmuid O'Donnell • Gavin Shaughnessy
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#tam">TAM</a></li>
+            <li><a href="#users">Users</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="overview">
+            <h2>Project Summary</h2>
+            <p>TFI Live Re-Imagined is a redesign of Ireland's national public transport app. The project focuses on real-time bus tracking, seamless ticketing, and accessibility improvements. Using the SCAMPER design thinking method, our team proposed data-driven, user-centric features that enhance reliability, inclusivity, and sustainability across Ireland's transport network.</p>
+        </section>
+
+        <section id="product">
+            <h2>The Product</h2>
+            
+            <h3>What We Built</h3>
+            <p>The reimagined TFI Live app integrates real-time GPS bus tracking, one-tap mobile ticketing, personalized notifications, and accessibility-focused UI.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🚌 Real-Time Tracking</h4>
+                    <p>View accurate live bus locations and ETAs with GPS precision</p>
+                </div>
+                <div class="feature-card">
+                    <h4>💳 One-Tap Ticketing</h4>
+                    <p>Buy and store tickets via Apple Pay or Google Pay instantly</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🔔 Smart Alerts</h4>
+                    <p>Receive vibration or voice alerts for upcoming stops</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🌱 Sustainability</h4>
+                    <p>Track CO₂ savings and earn rewards for eco-friendly travel</p>
+                </div>
+            </div>
+
+            <h3>Problem We're Solving</h3>
+            <div class="segment-card">
+                <p>The current TFI Live app struggles with static timetables that don't reflect delays, complicated multi-step ticket purchases, limited accessibility for older or visually impaired users, and a lack of personalization or engagement.</p>
+                <p><strong>Our solution:</strong> A frictionless, smart, and inclusive travel experience.</p>
+            </div>
+
+            <div class="usp-box">
+                <strong>Unique Selling Proposition:</strong> The only Irish public transport app combining real-time GPS tracking, one-tap ticketing, predictive alerts, accessibility-first design, and rewards-based sustainability tracking.
+            </div>
+
+            <h3>Competitive Analysis</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Competitor</th>
+                        <th>Strengths</th>
+                        <th>Weaknesses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google Maps</strong></td>
+                        <td>Accurate real-time tracking</td>
+                        <td>No ticketing or local personalization</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Citymapper</strong></td>
+                        <td>Excellent route planning & UX</td>
+                        <td>Limited Irish data – only available in Dublin</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Current TFI Live</strong></td>
+                        <td>Official coverage</td>
+                        <td>Outdated interface, limited features</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Customer Value</h3>
+            <ul>
+                <li><strong>Time-saving:</strong> Live accuracy reduces waiting and missed connections</li>
+                <li><strong>Ease of use:</strong> One-tap ticketing and simple navigation</li>
+                <li><strong>Peace of mind:</strong> Predictive alerts and "Share My Journey" safety options</li>
+                <li><strong>Inclusivity:</strong> Voice and high-contrast modes for accessibility</li>
+                <li><strong>Sustainability:</strong> Tracks CO₂ savings and rewards eco-friendly behavior</li>
+            </ul>
+        </section>
+
+        <section id="market">
+            <h2>Market Analysis</h2>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">58.3%</span>
+                    <div class="stat-label">of Dublin city centre commuters use public transport</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">145M</span>
+                    <div class="stat-label">Dublin Bus journeys in 2023 (record high)</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">308M</span>
+                    <div class="stat-label">total Irish public transport journeys in 2023</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">93%</span>
+                    <div class="stat-label">of Irish adults own smartphones</div>
+                </div>
+            </div>
+
+            <h3>Market Segmentation</h3>
+            
+            <div class="segment-card">
+                <h4>Daily Commuters (Primary)</h4>
+                <p><strong>Profile:</strong> 18–50 years old, students and professionals</p>
+                <p><strong>Needs:</strong> Real-time updates, reliability, minimal delays</p>
+                <p><strong>Value:</strong> Saves time with accurate live tracking and predictive alerts</p>
+            </div>
+
+            <div class="segment-card">
+                <h4>Tourists (Secondary)</h4>
+                <p><strong>Profile:</strong> Visitors using buses or trains for short stays</p>
+                <p><strong>Needs:</strong> Easy navigation, route suggestions, language clarity</p>
+                <p><strong>Value:</strong> Simple interface and built-in city guides</p>
+            </div>
+
+            <div class="segment-card">
+                <h4>Elderly Users (Secondary)</h4>
+                <p><strong>Profile:</strong> 55+ years old with accessibility needs</p>
+                <p><strong>Needs:</strong> Clear layouts, voice and vibration features</p>
+                <p><strong>Value:</strong> Accessibility-first design with large text and audio alerts</p>
+            </div>
+
+            <div class="segment-card">
+                <h4>Eco-Conscious Citizens (Growing)</h4>
+                <p><strong>Profile:</strong> 18–35 years old, sustainability-minded</p>
+                <p><strong>Needs:</strong> Information on emissions saved, eco rewards</p>
+                <p><strong>Value:</strong> Displays CO₂ savings and rewards sustainable choices</p>
+            </div>
+
+            <h3>Beachhead Market</h3>
+            <div class="stat-box">
+                <h3>Urban Daily Commuters in Dublin</h3>
+                <p>Ages 18–40 | Students & Working Professionals</p>
+                <p style="margin-top: 20px;">This segment represents over 2 million people in the Greater Dublin Area with high smartphone ownership (93%) and a demonstrated need for better transport solutions.</p>
+            </div>
+        </section>
+
+        <section id="tam">
+            <h2>Total Addressable Market (TAM)</h2>
+
+            <h3>Dublin Beachhead Market</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Estimate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Active Dublin Users</td>
+                        <td>500,000–700,000</td>
+                    </tr>
+                    <tr>
+                        <td>Average Revenue Per User (ARPU)</td>
+                        <td>€2.50/month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Annual Revenue Potential</strong></td>
+                        <td><strong>€15–€21 million/year</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Revenue Model</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>In-App Advertising</h4>
+                    <p>Local business partnerships and eco-sponsor ads</p>
+                    <p><strong>€0.50–€1.00</strong> per user/month</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Premium Subscription</h4>
+                    <p>Ad-free, delay alerts, CO₂ tracking</p>
+                    <p><strong>€2.00/month</strong> (15-20% uptake)</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Data Partnerships</h4>
+                    <p>Anonymized travel insights for councils</p>
+                    <p><strong>€200K–€500K/year</strong></p>
+                </div>
+            </div>
+
+            <h3>National Expansion Potential</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Estimated Users</th>
+                        <th>Annual Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dublin</strong></td>
+                        <td>500,000–700,000</td>
+                        <td>€15–€21 million</td>
+                    </tr>
+                    <tr>
+                        <td>Cork</td>
+                        <td>250,000</td>
+                        <td>€7.5 million</td>
+                    </tr>
+                    <tr>
+                        <td>Galway</td>
+                        <td>150,000</td>
+                        <td>€4.5 million</td>
+                    </tr>
+                    <tr>
+                        <td>Limerick</td>
+                        <td>120,000</td>
+                        <td>€3.6 million</td>
+                    </tr>
+                    <tr>
+                        <td>Waterford + Regional</td>
+                        <td>80,000</td>
+                        <td>€2.4 million</td>
+                    </tr>
+                    <tr style="background: #f0f4ff;">
+                        <td><strong>Total National TAM</strong></td>
+                        <td><strong>~1.3 million users</strong></td>
+                        <td><strong>€39–€45 million/year</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="stat-box">
+                <h3>€50–60 Million</h3>
+                <p>Potential annual revenue with tourist features and multi-mode transport integration</p>
+            </div>
+        </section>
+
+        <section id="users">
+            <h2>End-User Profile</h2>
+            
+            <div class="segment-card">
+                <h4>Demographics</h4>
+                <p>People of all ages, genders, incomes, and education levels who actively use public transport. The working class and students represent the largest market proportion, as they use public transport daily and benefit most from the app's features.</p>
+            </div>
+
+            <div class="segment-card">
+                <h4>User Overview</h4>
+                <p>Active public transport users who want real-time updates, optimal route suggestions, and stay informed about delays in their daily commutes.</p>
+            </div>
+
+            <div class="segment-card">
+                <h4>Current Frustrations</h4>
+                <p>Delayed buses, unreliable timetables, inconvenient scheduling, lack of real-time information, and poor accessibility features in existing solutions.</p>
+            </div>
+
+            <div class="segment-card">
+                <h4>Use Behaviors</h4>
+                <p>Regular daily usage to arrive on time consistently, reduce travel stress, and live more sustainably.</p>
+            </div>
+
+            <div class="segment-card">
+                <h4>Technology Profile</h4>
+                <p>Regularly uses apps like Google Maps, Revolut, Deliveroo, and other mobile-first services. Comfortable with digital payments and real-time tracking features.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>TFI Live Re-Imagined modernizes Ireland's public transport experience through real-time data, accessibility, and sustainability. By merging user convenience with smart predictive design, the app redefines how Irish commuters interact with public transport.</p>
+            <p>With cooperation between TFI, developers, and accessibility experts, this concept can scale nationally — promoting efficient, inclusive, and environmentally responsible travel across Ireland.</p>
+            
+            <div class="stat-box" style="margin-top: 40px;">
+                <p>Aligned with Ireland's National Sustainable Mobility Policy (2022–2030)</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>TFI Live Re-Imagined</strong></p>
+        <p>A student project reimagining Ireland's public transport experience</p>
+        <p style="margin-top: 20px; opacity: 0.8;">Joseph Folan • Sean Gannon • Diarmuid O'Donnell • Gavin Shaughnessy</p>
+    </footer>
+</body>
+</html>
