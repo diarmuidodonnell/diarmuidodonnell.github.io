@@ -117,6 +117,31 @@
             color: #764ba2;
         }
 
+        h4 {
+            font-size: 1.4em;
+            margin: 20px 0 10px;
+            color: #667eea;
+        }
+
+        .source-link {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 1px dashed #667eea;
+            transition: all 0.3s;
+        }
+
+        .source-link:hover {
+            color: #764ba2;
+            border-bottom: 1px solid #764ba2;
+        }
+
+        .source-citation {
+            font-style: italic;
+            color: #666;
+            margin-top: 5px;
+            font-size: 0.95em;
+        }
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -184,6 +209,11 @@
             margin-bottom: 10px;
         }
 
+        .stat-box a {
+            color: white;
+            text-decoration: underline;
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -245,6 +275,53 @@
             margin-bottom: 10px;
         }
 
+        .info-box {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .references-section {
+            background: #f8f9ff;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 60px;
+        }
+
+        .references-section h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .reference-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .reference-item::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .key-facts-list {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            margin: 20px 0;
+        }
+
+        .key-facts-list li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
         footer {
             background: #2d3748;
             color: white;
@@ -283,7 +360,7 @@
             <p>Redesigning Ireland's National Public Transport App</p>
             <p>Real-time tracking • Seamless ticketing • Accessibility-first design</p>
             <div class="team">
-                <strong>Team:</strong> Joseph Folan • Sean Gannon • Diarmuid O'Donnell • Gavin Shaughnessy
+                <strong>Team:</strong> Joseph Folan (22478072) • Sean Gannon (22419796) • Diarmuid O'Donnell (22339811) • Gavin Shaughnessy (18470574)
             </div>
         </div>
     </div>
@@ -295,6 +372,7 @@
             <li><a href="#market">Market</a></li>
             <li><a href="#tam">TAM</a></li>
             <li><a href="#users">Users</a></li>
+            <li><a href="#references">References</a></li>
         </ul>
     </nav>
 
@@ -305,41 +383,45 @@
         </section>
 
         <section id="product">
-            <h2>The Product</h2>
+            <h2>1. Product Choice</h2>
             
-            <h3>What We Built</h3>
+            <h3>What is the idea and what does it do?</h3>
             <p>The reimagined TFI Live app integrates real-time GPS bus tracking, one-tap mobile ticketing, personalized notifications, and accessibility-focused UI.</p>
 
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>🚌 Real-Time Tracking</h4>
-                    <p>View accurate live bus locations and ETAs with GPS precision</p>
-                </div>
-                <div class="feature-card">
-                    <h4>💳 One-Tap Ticketing</h4>
-                    <p>Buy and store tickets via Apple Pay or Google Pay instantly</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🔔 Smart Alerts</h4>
-                    <p>Receive vibration or voice alerts for upcoming stops</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🌱 Sustainability</h4>
-                    <p>Track CO₂ savings and earn rewards for eco-friendly travel</p>
-                </div>
-            </div>
+            <h4>Users can:</h4>
+            <ul>
+                <li>View accurate live bus locations and ETAs</li>
+                <li>Buy and store tickets via Apple Pay or Google Pay</li>
+                <li>Receive vibration or voice alerts for upcoming stops</li>
+                <li>Track CO₂ savings and earn sustainability rewards</li>
+            </ul>
 
-            <h3>Problem We're Solving</h3>
-            <div class="segment-card">
-                <p>The current TFI Live app struggles with static timetables that don't reflect delays, complicated multi-step ticket purchases, limited accessibility for older or visually impaired users, and a lack of personalization or engagement.</p>
-                <p><strong>Our solution:</strong> A frictionless, smart, and inclusive travel experience.</p>
-            </div>
+            <h3>What problem does it solve?</h3>
+            <p>The current TFI Live app struggles with:</p>
+            <ul>
+                <li>Static timetables that don't reflect delays</li>
+                <li>Complicated multi-step ticket purchases</li>
+                <li>Limited accessibility for older or visually impaired users</li>
+                <li>A lack of personalization or engagement</li>
+            </ul>
+            <p><strong>Our redesign delivers a frictionless, smart, and inclusive travel experience.</strong></p>
 
-            <div class="usp-box">
-                <strong>Unique Selling Proposition:</strong> The only Irish public transport app combining real-time GPS tracking, one-tap ticketing, predictive alerts, accessibility-first design, and rewards-based sustainability tracking.
-            </div>
+            <h3>Who are the customers?</h3>
+            <ul>
+                <li><strong>Primary customers:</strong> Urban commuters (students and workers) in Dublin and major Irish cities</li>
+                <li><strong>Secondary customers:</strong> Tourists and older passengers seeking easy-to-use, reliable transport information</li>
+            </ul>
 
-            <h3>Competitive Analysis</h3>
+            <h3>What value does it provide to customers?</h3>
+            <ul>
+                <li><strong>Time-saving:</strong> Live accuracy reduces waiting and missed connections</li>
+                <li><strong>Ease of use:</strong> One-tap ticketing and simple navigation</li>
+                <li><strong>Peace of mind:</strong> Predictive alerts and "Share My Journey" safety options</li>
+                <li><strong>Inclusivity:</strong> Voice and high-contrast modes for accessibility</li>
+                <li><strong>Sustainability:</strong> Tracks CO₂ savings and rewards eco-friendly behavior</li>
+            </ul>
+
+            <h3>Who are your competitors?</h3>
             <table>
                 <thead>
                     <tr>
@@ -367,80 +449,244 @@
                 </tbody>
             </table>
 
-            <h3>Customer Value</h3>
+            <div class="usp-box">
+                <strong>Unique Selling Proposition (USP):</strong><br>
+                The only Irish public transport app combining real-time GPS tracking, one-tap ticketing, predictive alerts, accessibility-first design, and rewards-based sustainability tracking.
+            </div>
+
+            <h3>Who/what would need to be involved to make it a reality?</h3>
             <ul>
-                <li><strong>Time-saving:</strong> Live accuracy reduces waiting and missed connections</li>
-                <li><strong>Ease of use:</strong> One-tap ticketing and simple navigation</li>
-                <li><strong>Peace of mind:</strong> Predictive alerts and "Share My Journey" safety options</li>
-                <li><strong>Inclusivity:</strong> Voice and high-contrast modes for accessibility</li>
-                <li><strong>Sustainability:</strong> Tracks CO₂ savings and rewards eco-friendly behavior</li>
+                <li><strong>Transport for Ireland (TFI):</strong> live bus data, ticketing API access</li>
+                <li><strong>Payment providers:</strong> Apple Pay, Google Pay, Revolut</li>
+                <li><strong>App developers & UX designers:</strong> accessible, intuitive interfaces</li>
+                <li><strong>Data analytics partners:</strong> predictive delay and CO₂ tracking</li>
+                <li><strong>Public transport operators:</strong> Dublin Bus, Bus Éireann, Luas</li>
+                <li><strong>Accessibility consultants:</strong> ensure WCAG 2.2 compliance</li>
             </ul>
         </section>
 
         <section id="market">
-            <h2>Market Analysis</h2>
+            <h2>2. The Market</h2>
 
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">58.3%</span>
-                    <div class="stat-label">of Dublin city centre commuters use public transport</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">145M</span>
-                    <div class="stat-label">Dublin Bus journeys in 2023 (record high)</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">308M</span>
-                    <div class="stat-label">total Irish public transport journeys in 2023</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">93%</span>
-                    <div class="stat-label">of Irish adults own smartphones</div>
-                </div>
-            </div>
-
-            <h3>Market Segmentation</h3>
+            <h3>2.1 Market Overview</h3>
+            <p>Public transport plays a major role in everyday life across Ireland, especially in Dublin.</p>
             
-            <div class="segment-card">
-                <h4>Daily Commuters (Primary)</h4>
-                <p><strong>Profile:</strong> 18–50 years old, students and professionals</p>
-                <p><strong>Needs:</strong> Real-time updates, reliability, minimal delays</p>
-                <p><strong>Value:</strong> Saves time with accurate live tracking and predictive alerts</p>
-            </div>
+            <p>According to <a href="https://www.rte.ie/news/business/2024/0628/1457131-58-of-dublin-commuters-used-public-transport-last-year/" target="_blank" class="source-link">RTÉ News (June 2024)</a>, <strong>58.3% of people entering Dublin city centre during morning rush hours used public transport</strong>, while only 25.3% travelled by car. This highlights a strong existing user base that relies on public transport daily.</p>
 
-            <div class="segment-card">
-                <h4>Tourists (Secondary)</h4>
-                <p><strong>Profile:</strong> Visitors using buses or trains for short stays</p>
-                <p><strong>Needs:</strong> Easy navigation, route suggestions, language clarity</p>
-                <p><strong>Value:</strong> Simple interface and built-in city guides</p>
-            </div>
+            <p>The <a href="https://www.nationaltransport.ie/news/record-highs-for-public-transport-passenger-numbers-in-2023/" target="_blank" class="source-link">National Transport Authority (NTA, 2024)</a> also reported record highs in 2023, with <strong>over 145 million journeys made on Dublin Bus and 308 million passenger journeys nationwide</strong> on public transport.</p>
 
-            <div class="segment-card">
-                <h4>Elderly Users (Secondary)</h4>
-                <p><strong>Profile:</strong> 55+ years old with accessibility needs</p>
-                <p><strong>Needs:</strong> Clear layouts, voice and vibration features</p>
-                <p><strong>Value:</strong> Accessibility-first design with large text and audio alerts</p>
-            </div>
+            <p>This steady rise in demand shows that Ireland's transport users are open to digital solutions that make their journeys easier, more reliable, and more sustainable.</p>
 
-            <div class="segment-card">
-                <h4>Eco-Conscious Citizens (Growing)</h4>
-                <p><strong>Profile:</strong> 18–35 years old, sustainability-minded</p>
-                <p><strong>Needs:</strong> Information on emissions saved, eco rewards</p>
-                <p><strong>Value:</strong> Displays CO₂ savings and rewards sustainable choices</p>
-            </div>
+            <h3>2.2 Market Segmentation</h3>
+            <p>The audience for the TFI Live Re-Imagined app can be divided into several key user segments based on age, behaviour, and goals.</p>
 
-            <h3>Beachhead Market</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Segment</th>
+                        <th>Characteristics</th>
+                        <th>Needs</th>
+                        <th>Value Proposition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Daily commuters</strong></td>
+                        <td>18–50 years old, students and professionals who use public transport regularly</td>
+                        <td>Real-time updates, reliability, minimal delays</td>
+                        <td>Saves time with accurate live tracking and predictive alerts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tourists</strong></td>
+                        <td>Visitors using buses or trains for short stays</td>
+                        <td>Easy navigation, route suggestions, language clarity</td>
+                        <td>Simple interface and built-in city guides for safer, smoother travel</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elderly users</strong></td>
+                        <td>55+ years old, may have visual or physical accessibility needs</td>
+                        <td>Clear layouts, voice and vibration features</td>
+                        <td>Accessibility-first design with large text, audio alerts, and simple navigation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Eco-conscious citizens</strong></td>
+                        <td>18–35 years old, sustainability-minded individuals</td>
+                        <td>Information on emissions saved, eco rewards</td>
+                        <td>Displays CO₂ savings and rewards users for sustainable travel choices</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Each segment represents a meaningful part of the Irish transport ecosystem, and the redesigned app could cater to all — while focusing on those who use buses and trains most often.</p>
+
+            <h3>2.3 Choice of Beachhead Market</h3>
             <div class="stat-box">
-                <h3>Urban Daily Commuters in Dublin</h3>
-                <p>Ages 18–40 | Students & Working Professionals</p>
-                <p style="margin-top: 20px;">This segment represents over 2 million people in the Greater Dublin Area with high smartphone ownership (93%) and a demonstrated need for better transport solutions.</p>
+                <h3>Beachhead Market</h3>
+                <p><strong>Urban daily commuters in Dublin (ages 18–40)</strong></p>
+                <p>Students and working professionals who rely on public transport every day</p>
             </div>
+
+            <h4>Reasons for Selecting This Market:</h4>
+
+            <div class="info-box">
+                <h4>1. Large and growing user base</h4>
+                <ul>
+                    <li>The Greater Dublin Area has a population of over 2 million people<br>
+                    <em>Source: <a href="https://www.cso.ie/en/csolatestnews/pressreleases/2023pressreleases/pressstatementcensusofpopulation2022-summaryresultsdublin/" target="_blank" class="source-link">CSO, 2023</a></em></li>
+                    <li>Public transport services in Dublin recorded 145 million bus journeys in 2023, the highest ever recorded<br>
+                    <em>Source: <a href="https://www.nationaltransport.ie/news/record-highs-for-public-transport-passenger-numbers-in-2023/" target="_blank" class="source-link">NTA, 2024</a></em></li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>2. High smartphone ownership and digital literacy</h4>
+                <ul>
+                    <li>Over 93% of Irish adults own a smartphone, and 90% use the internet daily<br>
+                    <em>Source: <a href="https://www.cso.ie/en/releasesandpublications/ep/p-isshh/informationsocietystatistics-households2023/" target="_blank" class="source-link">CSO, "Information Society Statistics — Households 2023"</a></em></li>
+                    <li>This makes Dublin commuters ideal early adopters of a digital mobility app</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>3. Existing pain points</h4>
+                <ul>
+                    <li>Many commuters report frustration with delays and lack of accurate live updates on existing apps</li>
+                    <li>The current TFI Live app mainly shows static timetables, which don't reflect real-time conditions</li>
+                    <li>These gaps create a clear opportunity for an upgraded version with live GPS tracking and proactive alerts</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>4. Policy and sustainability support</h4>
+                <ul>
+                    <li>Ireland's National Sustainable Mobility Policy (2022–2030) encourages digital tools that improve public transport and reduce emissions<br>
+                    <em>Source: Department of Transport, 2022</em></li>
+                    <li>The new app directly supports these national goals</li>
+                </ul>
+            </div>
+
+            <h4>Supporting Research</h4>
+            <ul>
+                <li><strong><a href="https://www.rte.ie/news/business/2024/0628/1457131-58-of-dublin-commuters-used-public-transport-last-year/" target="_blank" class="source-link">RTÉ (2024)</a>:</strong> 58.3% of Dublin city centre commuters used public transport in 2023</li>
+                <li><strong><a href="https://www.nationaltransport.ie/news/record-highs-for-public-transport-passenger-numbers-in-2023/" target="_blank" class="source-link">NTA (2024)</a>:</strong> Dublin Bus carried 145 million passengers, with over 308 million journeys nationwide</li>
+                <li><strong><a href="https://www.cso.ie/en/releasesandpublications/ep/p-isshh/informationsocietystatistics-households2023/" target="_blank" class="source-link">CSO (2023)</a>:</strong> Over 93% of Irish adults own smartphones, making digital transport services widely accessible</li>
+            </ul>
+
+            <p>Together, these data points show that urban commuters in Dublin are the best starting point for TFI Live Re-Imagined. They represent a large, tech-savvy, and highly active audience that would benefit most from the app's features — such as real-time GPS tracking, easy mobile ticketing, and eco-reward systems.</p>
+
+            <h3>2.4 Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Key Factor</th>
+                        <th>Insight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Target Segment</strong></td>
+                        <td>Urban daily commuters (students and professionals, 18–40)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Market Size</strong></td>
+                        <td>Over 2 million people in Greater Dublin Area (<a href="https://www.cso.ie/en/csolatestnews/pressreleases/2023pressreleases/pressstatementcensusofpopulation2022-summaryresultsdublin/" target="_blank" class="source-link">CSO, 2023</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transport Use</strong></td>
+                        <td>58% of inbound city travellers use public transport (<a href="https://www.rte.ie/news/business/2024/0628/1457131-58-of-dublin-commuters-used-public-transport-last-year/" target="_blank" class="source-link">RTÉ, 2024</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Digital Readiness</strong></td>
+                        <td>93% smartphone ownership among adults (<a href="https://www.cso.ie/en/releasesandpublications/ep/p-isshh/informationsocietystatistics-households2023/" target="_blank" class="source-link">CSO, 2023</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Opportunity</strong></td>
+                        <td>Improve reliability, live tracking, and accessibility for everyday users</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Policy Fit</strong></td>
+                        <td>Supports Ireland's 2030 sustainable mobility targets (Dept. of Transport, 2022)</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section id="tam">
-            <h2>Total Addressable Market (TAM)</h2>
+            <h2>3. Total Addressable Market (TAM)</h2>
 
-            <h3>Dublin Beachhead Market</h3>
+            <p>The Total Addressable Market (TAM) shows how much yearly revenue the new TFI Live Re-Imagined app could make if all target users in its first market (the Greater Dublin Area) used it regularly. This section uses real data about Irish public transport and simple estimates to explain the app's potential scale.</p>
+
+            <h3>3.1 Key Facts About the Market</h3>
+            <p>Public transport in Ireland is already used by a large number of people every day:</p>
+
+            <div class="key-facts-list">
+                <ul>
+                    <li><strong>County Dublin's population:</strong> 1,458,154 (Census 2022)<br>
+                    <em>Source: <a href="https://www.cso.ie/en/csolatestnews/pressreleases/2023pressreleases/pressstatementcensusofpopulation2022-summaryresultsdublin/" target="_blank" class="source-link">Central Statistics Office (CSO, 2023)</a></em></li>
+                    
+                    <li><strong>Greater Dublin Area population:</strong> 2,082,605 (2022)<br>
+                    <em>Source: <a href="https://en.wikipedia.org/wiki/Greater_Dublin_Area" target="_blank" class="source-link">CSO regional projections via Wikipedia, 2024</a></em></li>
+                    
+                    <li><strong>Dublin Bus passengers in 2023:</strong> over 145 million journeys<br>
+                    <em>Source: <a href="https://www.nationaltransport.ie/news/record-highs-for-public-transport-passenger-numbers-in-2023" target="_blank" class="source-link">National Transport Authority, 2024</a></em></li>
+                    
+                    <li><strong>Total Irish public transport journeys in 2023:</strong> more than 308 million, the highest ever<br>
+                    <em>Source: <a href="https://pmlgroup.ie/content/outlook-jan26-2024/" target="_blank" class="source-link">PML Group / TFI Data, 2024</a></em></li>
+                    
+                    <li><strong>58.3% of people</strong> entering Dublin city centre during morning rush hours used public transport<br>
+                    <em>Source: <a href="https://www.rte.ie/news/business/2024/0628/1457131-58-of-dublin-commuters-used-public-transport-last-year/" target="_blank" class="source-link">RTÉ News, June 2024</a></em></li>
+                </ul>
+            </div>
+
+            <p>These facts show that public transport is a big part of daily life in Dublin, and that there is already a large audience for a better, smarter app.</p>
+
+            <h3>3.2 Estimating the Beachhead Market</h3>
+            <p>The Beachhead Market is the first group of people who would most likely use the new app — in this case, daily commuters in Dublin who rely on buses or trains and use smartphones.</p>
+
+            <p>There isn't exact data on how many people use transport apps in Dublin, but we can make a reasonable estimate using the figures above:</p>
+            <ul>
+                <li>About 500,000–700,000 people commute in Dublin every day</li>
+                <li>Around 60–70% of them use public transport</li>
+                <li>Most commuters (about 70–80%) already use apps like Google Maps or TFI Live</li>
+            </ul>
+
+            <p>That gives a realistic range of about <strong>300,000–400,000 active users</strong>, with the possibility of growing to <strong>500,000–700,000 users</strong> as the new app adds features like real-time GPS and easy payments.</p>
+
+            <p><strong>For this TAM estimate, we use 500,000 users as the main figure.</strong></p>
+
+            <h3>3.3 Revenue Model Assumptions</h3>
+            <p>The new TFI Live app could stay free to use but earn small amounts from optional and fair monetization, such as:</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>1. In-App Advertising and Partnerships</h4>
+                    <ul style="text-align: left;">
+                        <li>Local business ads (cafés, shops, or events)</li>
+                        <li>"Eco Rewards" sponsors who support sustainable travel</li>
+                        <li><strong>Potential revenue:</strong> €0.50–€1.00 per user per month</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>2. Premium Subscription Option</h4>
+                    <ul style="text-align: left;">
+                        <li>Ad-free mode, delay alerts, and CO₂ tracking history</li>
+                        <li><strong>Monthly cost:</strong> €2.00 per user</li>
+                        <li>About 15–20% expected uptake</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>3. Data Partnerships</h4>
+                    <ul style="text-align: left;">
+                        <li>Aggregated, anonymised data</li>
+                        <li>Selling travel pattern insights to councils or research projects</li>
+                        <li><strong>Potential:</strong> €200,000–€500,000 per year</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>From these, a realistic <strong>average revenue per user (ARPU) would be €2.50 per month</strong>.</p>
+
+            <h3>3.4 TAM Calculation</h3>
             <table>
                 <thead>
                     <tr>
@@ -450,46 +696,31 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Active Dublin Users</td>
-                        <td>500,000–700,000</td>
+                        <td>Beachhead Market Size (active Dublin users)</td>
+                        <td>500,000</td>
                     </tr>
                     <tr>
                         <td>Average Revenue Per User (ARPU)</td>
-                        <td>€2.50/month</td>
+                        <td>€2.50 per month</td>
                     </tr>
-                    <tr>
-                        <td><strong>Annual Revenue Potential</strong></td>
-                        <td><strong>€15–€21 million/year</strong></td>
+                    <tr style="background: #f0f4ff;">
+                        <td><strong>Total Annual Revenue Potential (TAM)</strong></td>
+                        <td><strong>500,000 × €2.50 × 12 = €15 million/year</strong></td>
                     </tr>
                 </tbody>
             </table>
 
-            <h3>Revenue Model</h3>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>In-App Advertising</h4>
-                    <p>Local business partnerships and eco-sponsor ads</p>
-                    <p><strong>€0.50–€1.00</strong> per user/month</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Premium Subscription</h4>
-                    <p>Ad-free, delay alerts, CO₂ tracking</p>
-                    <p><strong>€2.00/month</strong> (15-20% uptake)</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Data Partnerships</h4>
-                    <p>Anonymized travel insights for councils</p>
-                    <p><strong>€200K–€500K/year</strong></p>
-                </div>
-            </div>
+            <p>If the app grows to the higher estimate of 700,000 users, the TAM would increase to <strong>€21 million/year</strong>.</p>
 
-            <h3>National Expansion Potential</h3>
+            <h3>3.5 Expansion Beyond Dublin</h3>
+            <p>Once the app succeeds in Dublin, it can expand to other major Irish cities: Cork, Galway, Limerick, and Waterford. Together, these areas have about 1.5 million residents and high levels of bus and train use.</p>
+
             <table>
                 <thead>
                     <tr>
                         <th>Region</th>
                         <th>Estimated Users</th>
-                        <th>Annual Revenue</th>
+                        <th>Estimated Annual Revenue</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -514,60 +745,166 @@
                         <td>€3.6 million</td>
                     </tr>
                     <tr>
-                        <td>Waterford + Regional</td>
+                        <td>Waterford + regional towns</td>
                         <td>80,000</td>
                         <td>€2.4 million</td>
                     </tr>
                     <tr style="background: #f0f4ff;">
-                        <td><strong>Total National TAM</strong></td>
-                        <td><strong>~1.3 million users</strong></td>
+                        <td><strong>Total (National TAM)</strong></td>
+                        <td><strong>≈1.3 million users</strong></td>
                         <td><strong>€39–€45 million/year</strong></td>
                     </tr>
                 </tbody>
             </table>
 
-            <div class="stat-box">
-                <h3>€50–60 Million</h3>
-                <p>Potential annual revenue with tourist features and multi-mode transport integration</p>
+            <p>Adding tourist features and multi-mode transport (like bikes or scooters) could raise the national total to <strong>€50–60 million per year</strong>.</p>
+
+            <h3>3.6 Strategic Insight</h3>
+            <p>Even small adoption levels could make a real difference.</p>
+            
+            <div class="info-box">
+                <p>If only <strong>10% of Dublin commuters (about 50,000 users)</strong> paid for premium features, the app could already make about <strong>€1.5 million per year</strong>.</p>
+                
+                <p>A fully scaled version across Ireland could reach <strong>€40–60 million per year</strong>, while helping more people use public transport and supporting national sustainability goals.</p>
+                
+                <p>This aligns with the Irish Government's National Sustainable Mobility Policy (2022–2030), which encourages digital tools to improve transport efficiency and reduce emissions.<br>
+                <em>Source: Department of Transport, 2022</em></p>
             </div>
+
+            <h4>Summary Table</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Estimated Active Users</th>
+                        <th>Estimated Annual Revenue</th>
+                        <th>Main Data Sources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dublin (Beachhead)</strong></td>
+                        <td>500,000–700,000</td>
+                        <td>€15–€21 million</td>
+                        <td><a href="https://www.cso.ie/en/csolatestnews/pressreleases/2023pressreleases/pressstatementcensusofpopulation2022-summaryresultsdublin/" target="_blank" class="source-link">CSO</a>, <a href="https://www.nationaltransport.ie/news/record-highs-for-public-transport-passenger-numbers-in-2023/" target="_blank" class="source-link">NTA</a>, <a href="https://www.rte.ie/news/business/2024/0628/1457131-58-of-dublin-commuters-used-public-transport-last-year/" target="_blank" class="source-link">RTÉ</a></td>
+                    </tr>
+                    <tr>
+                        <td>Cork</td>
+                        <td>250,000</td>
+                        <td>€7.5 million</td>
+                        <td><a href="https://www.cso.ie/" target="_blank" class="source-link">CSO</a>, <a href="https://www.nationaltransport.ie/" target="_blank" class="source-link">NTA</a></td>
+                    </tr>
+                    <tr>
+                        <td>Galway</td>
+                        <td>150,000</td>
+                        <td>€4.5 million</td>
+                        <td><a href="https://www.cso.ie/" target="_blank" class="source-link">CSO</a></td>
+                    </tr>
+                    <tr>
+                        <td>Limerick</td>
+                        <td>120,000</td>
+                        <td>€3.6 million</td>
+                        <td><a href="https://www.cso.ie/" target="_blank" class="source-link">CSO</a></td>
+                    </tr>
+                    <tr>
+                        <td>Waterford + others</td>
+                        <td>80,000</td>
+                        <td>€2.4 million</td>
+                        <td><a href="https://www.cso.ie/" target="_blank" class="source-link">CSO</a></td>
+                    </tr>
+                    <tr style="background: #f0f4ff;">
+                        <td><strong>Total National TAM</strong></td>
+                        <td><strong>≈1.3 million users</strong></td>
+                        <td><strong>€39–€45 million/year</strong></td>
+                        <td>Multiple verified sources</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section id="users">
-            <h2>End-User Profile</h2>
+            <h2>4. End-User Profile — Ideal Target Customer</h2>
             
-            <div class="segment-card">
-                <h4>Demographics</h4>
-                <p>People of all ages, genders, incomes, and education levels who actively use public transport. The working class and students represent the largest market proportion, as they use public transport daily and benefit most from the app's features.</p>
-            </div>
-
-            <div class="segment-card">
-                <h4>User Overview</h4>
-                <p>Active public transport users who want real-time updates, optimal route suggestions, and stay informed about delays in their daily commutes.</p>
-            </div>
-
-            <div class="segment-card">
-                <h4>Current Frustrations</h4>
-                <p>Delayed buses, unreliable timetables, inconvenient scheduling, lack of real-time information, and poor accessibility features in existing solutions.</p>
-            </div>
-
-            <div class="segment-card">
-                <h4>Use Behaviors</h4>
-                <p>Regular daily usage to arrive on time consistently, reduce travel stress, and live more sustainably.</p>
-            </div>
-
-            <div class="segment-card">
-                <h4>Technology Profile</h4>
-                <p>Regularly uses apps like Google Maps, Revolut, Deliveroo, and other mobile-first services. Comfortable with digital payments and real-time tracking features.</p>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Demographics</strong></td>
+                        <td>People of all ages, gender, incomes and education that actively participate in the usage of public transport. In particular the working class and students would be the largest proportion of the market as they are most likely to participate in public transport on a day to day basis and would benefit most from the benefits the app would provide.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overview</strong></td>
+                        <td>People that actively use public transport on a regular basis and want to be updated and receive suggestions as to more optimal routes to their destination and stay informed about any delays that may occur day to day.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Frustrations</strong></td>
+                        <td>Customers may find frustration with the app due to issues unrelated to the app itself such as delayed buses, unreliable timetables and inconvenient bus scheduling.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Use Behaviours</strong></td>
+                        <td>Customers will use the product on a regular basis to ensure they more consistently arrive on time, reduce travel stress and live more sustainably.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technology use</strong></td>
+                        <td>Regularly uses Google Maps, Revolut, Deliveroo, etc.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section>
             <h2>Conclusion</h2>
-            <p>TFI Live Re-Imagined modernizes Ireland's public transport experience through real-time data, accessibility, and sustainability. By merging user convenience with smart predictive design, the app redefines how Irish commuters interact with public transport.</p>
-            <p>With cooperation between TFI, developers, and accessibility experts, this concept can scale nationally — promoting efficient, inclusive, and environmentally responsible travel across Ireland.</p>
+            <p>TFI Live Re-Imagined modernizes Ireland's public transport experience through real-time data, accessibility, and sustainability. By merging user convenience with smart predictive design, the app could redefine how Irish commuters interact with public transport.</p>
+            
+            <p>With cooperation between TFI, developers, and accessibility experts, this concept can scale nationally — promoting efficient, inclusive, and environmentally responsible travel.</p>
             
             <div class="stat-box" style="margin-top: 40px;">
-                <p>Aligned with Ireland's National Sustainable Mobility Policy (2022–2030)</p>
+                <p><strong>Aligned with Ireland's National Sustainable Mobility Policy (2022–2030)</strong></p>
+                <p>Supporting digital tools that improve public transport and reduce emissions</p>
+            </div>
+        </section>
+
+        <section id="references" class="references-section">
+            <h2>References & Sources</h2>
+            <p>All data and statistics in this project are sourced from verified, credible sources:</p>
+            
+            <div class="reference-item">
+                <strong>RTÉ News (June 2024)</strong> - Dublin commuter transport statistics<br>
+                <a href="https://www.rte.ie/news/business/2024/0628/1457131-58-of-dublin-commuters-used-public-transport-last-year/" target="_blank" class="source-link">https://www.rte.ie/news/business/2024/0628/1457131-58-of-dublin-commuters-used-public-transport-last-year/</a>
+            </div>
+
+            <div class="reference-item">
+                <strong>National Transport Authority (NTA, 2024)</strong> - Record highs for public transport passenger numbers in 2023<br>
+                <a href="https://www.nationaltransport.ie/news/record-highs-for-public-transport-passenger-numbers-in-2023/" target="_blank" class="source-link">https://www.nationaltransport.ie/news/record-highs-for-public-transport-passenger-numbers-in-2023/</a>
+            </div>
+
+            <div class="reference-item">
+                <strong>Central Statistics Office (CSO, 2023)</strong> - Census of Population 2022 - Summary Results Dublin<br>
+                <a href="https://www.cso.ie/en/csolatestnews/pressreleases/2023pressreleases/pressstatementcensusofpopulation2022-summaryresultsdublin/" target="_blank" class="source-link">https://www.cso.ie/en/csolatestnews/pressreleases/2023pressreleases/pressstatementcensusofpopulation2022-summaryresultsdublin/</a>
+            </div>
+
+            <div class="reference-item">
+                <strong>Central Statistics Office (CSO, 2023)</strong> - Information Society Statistics — Households 2023<br>
+                <a href="https://www.cso.ie/en/releasesandpublications/ep/p-isshh/informationsocietystatistics-households2023/" target="_blank" class="source-link">https://www.cso.ie/en/releasesandpublications/ep/p-isshh/informationsocietystatistics-households2023/</a>
+            </div>
+
+            <div class="reference-item">
+                <strong>PML Group / TFI Data (2024)</strong> - Transport usage outlook<br>
+                <a href="https://pmlgroup.ie/content/outlook-jan26-2024/" target="_blank" class="source-link">https://pmlgroup.ie/content/outlook-jan26-2024/</a>
+            </div>
+
+            <div class="reference-item">
+                <strong>Wikipedia (2024)</strong> - Greater Dublin Area regional projections (CSO data)<br>
+                <a href="https://en.wikipedia.org/wiki/Greater_Dublin_Area" target="_blank" class="source-link">https://en.wikipedia.org/wiki/Greater_Dublin_Area</a>
+            </div>
+
+            <div class="reference-item">
+                <strong>Department of Transport (2022)</strong> - National Sustainable Mobility Policy (2022–2030)
             </div>
         </section>
     </div>
@@ -575,7 +912,7 @@
     <footer>
         <p><strong>TFI Live Re-Imagined</strong></p>
         <p>A student project reimagining Ireland's public transport experience</p>
-        <p style="margin-top: 20px; opacity: 0.8;">Joseph Folan • Sean Gannon • Diarmuid O'Donnell • Gavin Shaughnessy</p>
+        <p style="margin-top: 20px; opacity: 0.8;">Joseph Folan (22478072) • Sean Gannon (22419796) • Diarmuid O'Donnell (22339811) • Gavin Shaughnessy (18470574)</p>
     </footer>
 </body>
 </html>
