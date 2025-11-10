@@ -351,6 +351,23 @@
                 padding: 40px 15px;
             }
         }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -368,6 +385,7 @@
     <nav>
         <ul>
             <li><a href="#overview">Overview</a></li>
+            <li><a href="#brochure">Brochures</a></li>
             <li><a href="#product">Product</a></li>
             <li><a href="#market">Market</a></li>
             <li><a href="#tam">TAM</a></li>
@@ -940,6 +958,25 @@
             </div>
         </div>
     </section>
+
+    <section id="brochure">
+            <h2>Download Our Brochures</h2>
+            <p>Get comprehensive overviews of TFI Live Re-Imagined in our downloadable brochures.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card" style="text-align: center;"
+                    <a href="assets/1.pdf" download class="download-btn">Download Brochure 1</a>
+                </div>
+                
+                <div class="feature-card" style="text-align: center;">
+                    <a href="assets/2.pdf" download class="download-btn">Download Brochure 2</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: #666; font-style: italic;">Click the buttons above to download our brochures as PDFs</p>
+            </div>
+        </section>
     <section>
         <section>
             <h2>Conclusion</h2>
