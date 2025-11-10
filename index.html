@@ -351,43 +351,40 @@
                 padding: 40px 15px;
             }
         }
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-            color: white;
-        }
-
-        .pdf-container {
+.brochure-image-container {
             width: 100%;
-            height: 800px;
-            margin: 20px 0;
+            margin: 30px 0;
+            text-align: center;
+            background: white;
+            padding: 20px;
             border-radius: 12px;
-            overflow: hidden;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        .pdf-viewer {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .brochure-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .brochure-image:hover {
+            transform: scale(1.02);
+            cursor: zoom-in;
         }
 
         @media (max-width: 768px) {
-            .pdf-container {
-                height: 600px;
+            .brochure-image-container {
+                padding: 10px;
             }
+        }
+                .brochure-image-container a {
+            display: inline-block;
+        }
+
+        .brochure-image-container a:hover .brochure-image {
+            transform: scale(1.02);
         }
     </style>
 </head>
@@ -980,26 +977,22 @@
         </div>
     </section>
 
-    <section id="brochure">
+<section id="brochure">
             <h2>Our Brochures</h2>
-            <p>Explore TFI Live Re-Imagined's comprehensive overview below.</p>
+            <p>Explore TFI Live Re-Imagined's comprehensive overview below. Click images to enlarge.</p>
             
-            <h3 style="margin-top: 40px;">Brochure 1: Services & Benefits</h3>
-            <div class="pdf-container">
-                <iframe 
-                    src="assets/1.pdf" 
-                    class="pdf-viewer"
-                    title="TFI Live Brochure 1">
-                </iframe>
+
+            <div class="brochure-image-container">
+                <a href="assets/1.png" target="_blank">
+                    <img src="assets/1.png" alt="TFI Live Brochure 1 - Services & Benefits" class="brochure-image">
+                </a>
             </div>
 
-            <h3 style="margin-top: 60px;">Brochure 2: Success Stories & Contact</h3>
-            <div class="pdf-container">
-                <iframe 
-                    src="assets/2.pdf" 
-                    class="pdf-viewer"
-                    title="TFI Live Brochure 2">
-                </iframe>
+
+            <div class="brochure-image-container">
+                <a href="assets/2.png" target="_blank">
+                    <img src="assets/2.png" alt="TFI Live Brochure 2 - Success Stories & Contact" class="brochure-image">
+                </a>
             </div>
         </section>
     <section>
